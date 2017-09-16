@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TikTakToe</string>
+    <string name="winner">winner</string>
+    <string name="restart_game">Restart game</string>
+</resources>

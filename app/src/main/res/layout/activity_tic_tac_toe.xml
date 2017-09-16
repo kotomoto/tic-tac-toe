@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".TicTacToeActivity">
+
+    <GridLayout
+        android:id="@+id/board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boardMarginTop"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="00"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="01"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="02"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="10"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="11"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="12"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="20"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="21"/>
+
+        <Button
+            style="@style/gridButtonStyle"
+            android:onClick="onCellClicked"
+            android:tag="22"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/winnerPlayerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board"
+        tools:text="X"/>
+
+    <TextView
+        android:id="@+id/endGameIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/winner"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winnerPlayerLabel"/>
+
+</android.support.constraint.ConstraintLayout>
