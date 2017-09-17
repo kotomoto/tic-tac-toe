@@ -81,6 +81,7 @@
         android:layout_height="wrap_content"
         android:text="@string/winner"
         android:textSize="30sp"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/winnerPlayerLabel"/>
