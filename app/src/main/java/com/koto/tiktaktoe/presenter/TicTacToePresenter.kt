@@ -1,4 +1,8 @@
-package com.koto.tiktaktoe
+package com.koto.tiktaktoe.presenter
+
+import com.koto.tiktaktoe.view.TicTacToeView
+import com.koto.tiktaktoe.model.Board
+import com.koto.tiktaktoe.model.Player
 
 class TicTacToePresenter(val view: TicTacToeView) : Presenter {
 

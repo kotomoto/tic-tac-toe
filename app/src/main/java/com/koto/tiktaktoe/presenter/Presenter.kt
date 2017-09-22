@@ -1,4 +1,4 @@
-package com.koto.tiktaktoe
+package com.koto.tiktaktoe.presenter
 
 interface Presenter {
     fun onCreate()

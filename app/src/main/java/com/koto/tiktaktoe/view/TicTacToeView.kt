@@ -1,4 +1,4 @@
-package com.koto.tiktaktoe
+package com.koto.tiktaktoe.view
 
 interface TicTacToeView {
     fun showWinner(winningPlayerLabel: String)

@@ -1,4 +1,4 @@
-package com.koto.tiktaktoe
+package com.koto.tiktaktoe.model
 
 class Board {
     private var cells = Array(3, { Array<Cell?>(3, { _ -> Cell(Player.EMPTY) }) })
