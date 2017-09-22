@@ -1,7 +1,7 @@
 package com.koto.tiktaktoe.model
 
 class Board {
-    private var cells = Array(3, { Array<Cell?>(3, { _ -> Cell(Player.EMPTY) }) })
+    private var cells = Array(3, { Array(3, { _ -> Cell(Player.EMPTY) }) })
 
     private var winner: Player? = null
     private var state: GameState? = null
@@ -55,7 +55,7 @@ class Board {
     fun getWinner(): Player? = winner
 
     private fun clearCells() {
-        cells = Array(3, { Array<Cell?>(3, { _ -> Cell(Player.EMPTY) }) })
+        cells = Array(3, { Array(3, { _ -> Cell(Player.EMPTY) }) })
     }
 
     private fun isValid(row: Int, col: Int): Boolean =
@@ -68,7 +68,7 @@ class Board {
 
     private fun isOutOfBounds(idx: Int): Boolean = idx < 0 || idx > 2
 
-    private fun isCellValueAlreadySet(row: Int, col: Int): Boolean = cells[row][col]?.player != Player.EMPTY
+    private fun isCellValueAlreadySet(row: Int, col: Int): Boolean = cells[row][col].player != Player.EMPTY
 
     /**
      * Algorithm adapted from http://www.ntu.edu.sg/home/ehchua/programming/java/JavaGame_TicTacToe.html
@@ -79,23 +79,23 @@ class Board {
      * *              has a tic tac toe.
      */
     private fun isWinningMoveByPlayer(player: Player?, currentRow: Int, currentCol: Int): Boolean =
-            cells[currentRow][0]?.player == player         // 3-in-the-row
-                    && cells[currentRow][1]?.player == player
-                    && cells[currentRow][2]?.player == player
+            cells[currentRow][0].player == player         // 3-in-the-row
+                    && cells[currentRow][1].player == player
+                    && cells[currentRow][2].player == player
 
-                    || cells[0][currentCol]?.player == player      // 3-in-the-column
-                    && cells[1][currentCol]?.player == player
-                    && cells[2][currentCol]?.player == player
+                    || cells[0][currentCol].player == player      // 3-in-the-column
+                    && cells[1][currentCol].player == player
+                    && cells[2][currentCol].player == player
 
                     || currentRow == currentCol            // 3-in-the-diagonal
-                    && cells[0][0]?.player == player
-                    && cells[1][1]?.player == player
-                    && cells[2][2]?.player == player
+                    && cells[0][0].player == player
+                    && cells[1][1].player == player
+                    && cells[2][2].player == player
 
                     || currentRow + currentCol == 2    // 3-in-the-opposite-diagonal
-                    && cells[0][2]?.player == player
-                    && cells[1][1]?.player == player
-                    && cells[2][0]?.player == player
+                    && cells[0][2].player == player
+                    && cells[1][1].player == player
+                    && cells[2][0].player == player
 
     private fun flipCurrentTurn() {
         currentTurn = when (currentTurn) {

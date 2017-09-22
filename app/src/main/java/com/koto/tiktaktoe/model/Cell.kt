@@ -1,3 +1,3 @@
 package com.koto.tiktaktoe.model
 
-class Cell(var player: Player?)
+class Cell(var player: Player)
